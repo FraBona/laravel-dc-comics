@@ -8,5 +8,9 @@ use App\Models\Fumetto;
 
 class FumettoController extends Controller
 {
- 
+ public function index() {
+    $fumettos = Fumetto::all();
+
+    return view('fumettos.index', compact('fumettos'));
+ }
 }

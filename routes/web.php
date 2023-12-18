@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FumettoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guest.index');
-});
+ Route::get('/', function () {
+     return view('guest.index');
+ });
+
+//Route::get('/', [FumettoController::class,'index'])->name('home');
+
+Route::get('/fumettos', [FumettoController::class,'index'])->name('fumettos.index');
