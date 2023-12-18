@@ -13,4 +13,10 @@ class FumettoController extends Controller
 
     return view('fumettos.index', compact('fumettos'));
  }
+
+ public function show($id){
+    $fumetto = Fumetto::findOrFail($id);
+
+    return view('fumettos.show', compact('fumetto'));
+ }
 }

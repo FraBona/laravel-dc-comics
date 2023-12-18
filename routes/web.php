@@ -21,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', [FumettoController::class,'index'])->name('home');
 
 Route::get('/fumettos', [FumettoController::class,'index'])->name('fumettos.index');
+
+Route::get('/fumettos/{fumetto}', [FumettoController::class,'show'])->name('fumettos.show');

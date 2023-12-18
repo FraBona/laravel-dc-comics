@@ -45,7 +45,7 @@
     @foreach ($fumettos as $fumetto)
 
     <img src="{{ $fumetto->thumb }}" alt="" width="68">
-    <p>{{$fumetto->title}}</p>
+    <p><a href="{{route('fumettos.show', $fumetto->id)}}">{{$fumetto->title}}</a></p>
     <p>{{$fumetto->description}}</p>
     <p>{{$fumetto->price}}</p>
     <p>{{$fumetto->series}}</p>
