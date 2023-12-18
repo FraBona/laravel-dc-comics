@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
   <div class="section">
- <!--   <div class="container">
+    <div class="container">
+    <h1><a href="{{route('fumettos.create')}}">Nuovo Fumetto</a></h1>
       <div class="row">
         <table class="table">
           <thead>
@@ -25,34 +27,23 @@
             @foreach ($fumettos as $fumetto)
 
               <tr>
-                <tr>
+                <td>
                   <img src="{{ $fumetto->thumb }}" alt="" width="50">
-                </tr>
-                <tr>{{$fumetto->title}}</tr>
-                <tr>{{$fumetto->description}}</tr>
-                <tr>{{$fumetto->price}}</tr>
-                <tr>{{$fumetto->series}}</tr>
-                <tr>{{$fumetto->sale_date}}</tr>
-                <tr>{{$fumetto->type}}</tr>
-                <tr></tr>
+                </td>
+                <td><a href="{{route('fumettos.show', $fumetto->id)}}">{{$fumetto->title}}</a></td>
+                <td>{{$fumetto->description}}</td>
+                <td>{{$fumetto->price}}</td>
+                <td>{{$fumetto->series}}</td>
+                <td>{{$fumetto->sale_date}}</td>
+                <td>{{$fumetto->type}}</td>
               </tr>
 
             @endforeach
           </tbody>
         </table>
       </div>
-    </div> -->
-    <h1><a href="{{route('fumettos.create')}}">Nuovo Fumetto</a></h1>
-    @foreach ($fumettos as $fumetto)
-
-    <img src="{{ $fumetto->thumb }}" alt="" width="68">
-    <p><a href="{{route('fumettos.show', $fumetto->id)}}">{{$fumetto->title}}</a></p>
-    <p>{{$fumetto->description}}</p>
-    <p>{{$fumetto->price}}</p>
-    <p>{{$fumetto->series}}</p>
-    <p>{{$fumetto->sale_date}}</p>
-    <p>{{$fumetto->type}}</p>
-    @endforeach
+    </div> 
   </div>
+
 </body>
 </html>
