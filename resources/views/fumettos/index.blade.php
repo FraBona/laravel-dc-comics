@@ -42,6 +42,7 @@
         </table>
       </div>
     </div> -->
+    <h1><a href="{{route('fumettos.create')}}">Nuovo Fumetto</a></h1>
     @foreach ($fumettos as $fumetto)
 
     <img src="{{ $fumetto->thumb }}" alt="" width="68">
