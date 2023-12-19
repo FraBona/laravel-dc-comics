@@ -9,7 +9,7 @@
   <section>
     <h1>{{$fumetto->title}}</h1>
     <p>{{$fumetto->description}}</p>
-    
+    <a href="{{route('fumettos.index')}}">Home</a>
   </section>
 </body>
 </html>

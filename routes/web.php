@@ -35,3 +35,6 @@ Route::get('fumettos/{fumetto}/edit',[FumettoController::class,'edit'])
 
 Route::put('/fumettos/{fumetto}', [FumettoController::class, 'update'])
 ->name('fumettos.update');
+
+Route::delete('fumettos/{fumetto}', [FumettoController::class, 'destroy'])
+->name('fumettos.destroy');

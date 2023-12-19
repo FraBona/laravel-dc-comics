@@ -21,6 +21,7 @@
               <th>Serie</th>
               <th>Date di rilascio</th>
               <th>Tipo</th>
+              <th>Modifica</th>
             </tr>
           </thead>
           <tbody>
@@ -36,6 +37,18 @@
                 <td>{{$fumetto->series}}</td>
                 <td>{{$fumetto->sale_date}}</td>
                 <td>{{$fumetto->type}}</td>
+                <td>
+                  <a href="{{route('fumettos.edit',$fumetto)}}">Edit</a>
+                </td>
+                <td>
+                  <form action="{{route('fumettos.destroy', $fumetto)}}" method="post">
+                    @csrf
+
+                    @method('DELETE')
+
+                    <input type="submit" value="cancella">
+                  </form>
+                </td>
               </tr>
 
             @endforeach
