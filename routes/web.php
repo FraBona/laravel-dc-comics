@@ -29,3 +29,9 @@ Route::get('/fumettos/{fumetto}', [FumettoController::class,'show'])->name('fume
 
 Route::post('/fumettos', [FumettoController::class,'store'])
 ->name('fumettos.store');
+
+Route::get('fumettos/{fumetto}/edit',[FumettoController::class,'edit'])
+->name('fumettos.edit');
+
+Route::put('/fumettos/{fumetto}', [FumettoController::class, 'update'])
+->name('fumettos.update');

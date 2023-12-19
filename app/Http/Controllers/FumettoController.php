@@ -44,4 +44,17 @@ public function store(Request $request){
 
     return redirect()->route('fumettos.show',$new_fumetto);
 }
+
+public function edit(Fumetto $fumetto){
+    return view('fumettos.edit', compact('fumetto'));
+}
+
+public function update(Request $request, Fumetto $fumetto){
+    $data = $request->all();
+    
+    $fumetto->update($data);
+
+    return redirect()->route('fumettos.show', $fumetto);
+}
+
 }

@@ -9,6 +9,7 @@
   <section>
     <h1>{{$fumetto->title}}</h1>
     <p>{{$fumetto->description}}</p>
+    
   </section>
 </body>
 </html>
