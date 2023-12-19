@@ -15,7 +15,7 @@
   <label for="thumb">Image</label><br>
   <input type="text" id="thumb" name="thumb" value=""><br><br>
   <label for="price">Price</label><br>
-  <input type="text" id="price" name="price" value=""><br><br>
+  <input type="number" id="price" name="price" value=""><br><br>
   <label for="series">Series</label><br>
   <input type="text" id="series" name="series" value=""><br><br>
   <label for="sale_date">Sale Date</label><br>
