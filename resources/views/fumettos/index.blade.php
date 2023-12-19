@@ -46,7 +46,7 @@
 
                     @method('DELETE')
 
-                    <input type="submit" value="cancella">
+                    <input type="submit" value="cancella" onclick="return confirm('are you sure you want delete this item')">
                   </form>
                 </td>
               </tr>
@@ -57,6 +57,9 @@
       </div>
     </div> 
   </div>
+
+  <script>
+  </script>
 
 </body>
 </html>
